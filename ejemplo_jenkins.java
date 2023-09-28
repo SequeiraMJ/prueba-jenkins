@@ -7,7 +7,14 @@ public class ejemplo_jenkins {
          */
         String name = "Macgyver";
         for (int i = 0; i < 15; i++) {
-            System.out.println("Hello, I am " + name + " and I am printing the number " + (i+1));
+            System.out.println("Hello, I am " + name + " and I am printing the number " + (i + 1));
+            try {
+                int randomSleepTime = (int) (Math.random() * 4000) + 1000; // Random sleep between 1 and 5 seconds
+                Thread.sleep(randomSleepTime);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
+
     }
 }
